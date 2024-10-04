@@ -1,38 +1,75 @@
-export default function Services() {
+import { useTranslation } from 'react-i18next';
+
+interface Service {
+  header: string;
+  items: string[];
+}
+
+const Services= () => {
+  const { t } = useTranslation();
+
+  const generalHealth: Service = {
+    header: t('safeHealthyBite.services.generalHealth.header'),
+    items: t('safeHealthyBite.services.generalHealth.items', { returnObjects: true }) as string[],
+  };
+
+  const foodSafety: Service = {
+    header: t('safeHealthyBite.services.foodSafety.header'),
+    items: t('safeHealthyBite.services.foodSafety.items', { returnObjects: true }) as string[],
+  };
+
+  const naturalRemedies: Service = {
+    header: t('safeHealthyBite.services.naturalRemedies.header'),
+    items: t('safeHealthyBite.services.naturalRemedies.items', { returnObjects: true }) as string[],
+  };
+
   return (
-    <section id="services" className="min-h-screen bg-white py-12">
+    <section id="services" className="bg-white p-6 sm:p-10 lg:p-12">
       <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold text-gray-800">Our Services</h2>
-        <p className="text-lg text-gray-600 mt-2">
-          We offer a wide range of services to meet your needs. Here are some of our top services.
-        </p>
+        <h2 className="text-4xl font-bold text-blue-600">
+          {t('safeHealthyBite.services.header')}
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
-        {/* Service 1 */}
-        <div className="p-6 bg-gray-100 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-3">Service One</h3>
-          <p className="text-gray-600">
-            We provide excellent service to help you achieve your goals. Our team is dedicated to ensuring your success.
-          </p>
+        {/* General Health & Nutrition Consulting */}
+        <div className="p-6 bg-gray-100 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex flex-col">
+          <h3 className="text-2xl font-semibold text-blue-600 mb-3">{generalHealth.header}</h3>
+          <ul className="text-gray-600 flex-grow">
+            {generalHealth.items.map((item, index) => (
+              <li key={index} className="mb-2">
+                - {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* Service 2 */}
-        <div className="p-6 bg-gray-100 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-3">Service Two</h3>
-          <p className="text-gray-600">
-            With cutting-edge technology, we deliver results that exceed expectations. Let us help you innovate.
-          </p>
+        {/* Food Safety Consulting */}
+        <div className="p-6 bg-gray-100 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex flex-col">
+          <h3 className="text-2xl font-semibold text-blue-600 mb-3">{foodSafety.header}</h3>
+          <ul className="text-gray-600 flex-grow">
+            {foodSafety.items.map((item, index) => (
+              <li key={index} className="mb-2">
+                - {item}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        {/* Service 3 */}
-        <div className="p-6 bg-gray-100 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-3">Service Three</h3>
-          <p className="text-gray-600">
-            Our customer support is here to assist you 24/7, providing you with the best experience possible.
-          </p>
+        {/* Natural Remedies for Health Improvement */}
+        <div className="p-6 bg-gray-100 rounded-lg shadow-lg transition-transform transform hover:scale-105 flex flex-col">
+          <h3 className="text-2xl font-semibold text-blue-600 mb-3">{naturalRemedies.header}</h3>
+          <ul className="text-gray-600 flex-grow">
+            {naturalRemedies.items.map((item, index) => (
+              <li key={index} className="mb-2">
+                - {item}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default Services;

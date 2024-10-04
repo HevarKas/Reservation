@@ -1,18 +1,21 @@
 import { useEffect, useState } from "react";
+import SliderOne from '~/assets/slider-1.png';
+import SliderTwo from '~/assets/slider-2.png';
+import SliderThree from '~/assets/slider-3.png';
+import SliderFour from '~/assets/slider-4.png';
 
 // Add your image URLs here
 const images = [
-  "https://via.placeholder.com/800x400.png?text=Slide+1",
-  "https://via.placeholder.com/800x400.png?text=Slide+2",
-  "https://via.placeholder.com/800x400.png?text=Slide+3",
-  "https://via.placeholder.com/800x400.png?text=Slide+4",
+  SliderOne,
+  SliderTwo,
+  SliderThree,
+  SliderFour
 ];
 
 export default function ImageSlider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  // Auto-slide functionality
   useEffect(() => {
     if (!isPaused) {
       const autoSlide = setInterval(() => {
@@ -22,12 +25,10 @@ export default function ImageSlider() {
     }
   }, [isPaused]);
 
-  // Function to go to the next slide
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
-  // Function to go to the previous slide
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
@@ -47,13 +48,12 @@ export default function ImageSlider() {
             key={index}
             src={img}
             alt={`Slide ${index + 1}`}
-            className="min-w-full h-64 sm:h-80 lg:h-96 object-cover"
+            className="min-w-full min-h-[35rem] sm:h-80 lg:h-96 object-cover"
             aria-label={`Slide ${index + 1}`}
           />
         ))}
       </div>
 
-      {/* Previous Button */}
       <button
         onClick={prevSlide}
         className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
@@ -62,7 +62,6 @@ export default function ImageSlider() {
         &#10094;
       </button>
 
-      {/* Next Button */}
       <button
         onClick={nextSlide}
         className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white px-4 py-2 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
@@ -71,7 +70,6 @@ export default function ImageSlider() {
         &#10095;
       </button>
 
-      {/* Dots Navigation */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
           <button

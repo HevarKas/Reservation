@@ -8,6 +8,9 @@ import About from "~/components/About";
 import Services from "~/components/Services";
 import ContactUs from "~/components/ContactUs";
 import { toast } from "react-toastify";
+import { Element } from "react-scroll";
+import MoreInformation from "~/components/MoreInformation";
+import PriceDetails from "~/components/PriceDetails";
 
 type ActionResult = {
   type: 'success' | 'error';
@@ -68,7 +71,7 @@ export default function Reservations() {
 
   const handleDateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const date = e.target.value;
-    setSearchParams({ date });
+    setSearchParams({ date });  // Update the URL without causing a scroll
   };
 
   useEffect(() => {
@@ -77,68 +80,78 @@ export default function Reservations() {
       setPhoneNumber('');
       setEmail('');
       setAppointmentTime('');
-      setSearchParams({ date: '' });
+      setSearchParams({ date: '' });  // Reset the date in the URL
       toast.success('Reservation created successfully!');
     }
 
     if (actionData?.type === 'error' && actionData.error) {
-        toast.error(actionData.error.message);
+      toast.error(actionData.error.message);
     }
   }, [actionData, setSearchParams]);
 
   return (
     <article className="text-gray-700">
-      {/* Navbar Section */}
       <Navbar />
 
-      {/* Hero Section with Slider */}
-      <section id="slider" className="h-screen bg-gray-800 flex items-center justify-center">
+      <Element name="slider" className="element">
         <ImageSlider />
-      </section>
+      </Element>
 
-      {/* About Section */}
-      <section id="about" className="min-h-screen bg-gray-100 flex flex-col justify-center items-center text-center p-8">
+      <Element name="about" className="element">
         <About />
-      </section>
+      </Element>
 
-      {/* Services Section */}
-      <section id="services" className="min-h-screen bg-white py-16">
+      <Element name="services" className="element">
         <Services />
-      </section>
+      </Element>
 
-      {/* Reservation Section */}
-      <section id="reservation" className="py-16 bg-gray-50 space-y-8">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Make a Reservation</h2>
-          <Form method="post" className="space-y-4 bg-white p-6 rounded-lg shadow-lg">
-            <ReservationDetails
-              name={name}
-              setName={setName}
-              phoneNumber={phoneNumber}
-              setPhoneNumber={setPhoneNumber}
-              email={email}
-              setEmail={setEmail}
-              selectedDate={selectedDate}
-              handleDateChange={handleDateChange}
-              appointmentTime={appointmentTime}
-              setAppointmentTime={setAppointmentTime}
-              availableTimeSlots={availableTimeSlots}
-            />
-            <button
-              type="submit"
-              className="w-full py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition duration-200"
-              disabled={isLoading}
-            >
-              {isLoading ? 'Loading...' : 'Submit'}
-            </button>
-          </Form>
-        </div>
-      </section>
+      <Element name="reservation" className="element">
+  <div className="max-w-4xl mx-auto px-4 py-12">
+    <h2 className="text-4xl font-bold text-center mb-12 text-blue-600">
+      Make a Reservation
+    </h2>
 
-      {/* Contact Us Section */}
-      <section id="contact-us" className="min-h-screen bg-white py-16">
+    <Form
+      method="post"
+      className="space-y-6"
+    >
+      <ReservationDetails
+        name={name}
+        setName={setName}
+        phoneNumber={phoneNumber}
+        setPhoneNumber={setPhoneNumber}
+        email={email}
+        setEmail={setEmail}
+        selectedDate={selectedDate}
+        handleDateChange={handleDateChange}
+        appointmentTime={appointmentTime}
+        setAppointmentTime={setAppointmentTime}
+        availableTimeSlots={availableTimeSlots}
+      />
+
+      <button
+        type="submit"
+        className="w-full py-3 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 transition duration-200 disabled:opacity-50"
+        disabled={isLoading}
+      >
+        {isLoading ? 'Loading...' : 'Submit'}
+      </button>
+    </Form>
+  </div>
+</Element>
+
+
+      <Element name="information" className="element">
+        <MoreInformation />
+      </Element>
+
+      <Element name="contact" className="element">
         <ContactUs />
-      </section>
+      </Element>
+
+      <Element name="price" className="element">
+        <PriceDetails />
+      </Element>
     </article>
   );
 }

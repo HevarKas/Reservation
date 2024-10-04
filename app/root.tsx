@@ -8,6 +8,7 @@ import {
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./tailwind.css";
+import { LanguageProvider } from "./components/LanguageContext";
 
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -30,6 +31,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-       <><ToastContainer /><Outlet /></>
+       <LanguageProvider>
+          <ToastContainer />
+          <Outlet />
+       </LanguageProvider>
   );
 }
