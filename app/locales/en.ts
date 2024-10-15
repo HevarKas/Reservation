@@ -1,4 +1,81 @@
 export const englishTranslations = {
+  navbar: {
+    title: "title",
+    about: "about",
+    service: "service",
+    information: "information",
+    testimonial: "testimonial",
+    contact: "contact",
+    price: "price",
+    reservation: "reservation"
+  },
+  companyName: "Safe Healthy Bite",
+  slogan: "Safe food, healthy choices, better life",
+  description: "At Safe Healthy Bite, we believe that food is not just fuel, but a powerful tool for health, well-being, and longevity. We lead the path to a healthier life through expert food safety management, nutritional advice, and natural remedies.",
+  services: {
+    foodSafety: "Food Safety",
+    nutritionAdvisory: "General Health and Nutrition Advisory",
+  },
+  get_in_touch: {
+    contact_us: "Contact Us",
+    email: "Email",
+    phone: "Phone",
+    location: "Location",
+    calling_time: "Calling Time",
+    follow_us: "Follow Us",
+    stay_updated: "Stay Updated"
+  },
+  price: {
+    consultation: {
+      title: "Initial Consultation",
+      content: "the beginning of the interview includes a survey of illnesses and goals",
+      options: {
+        half_hour: "30 min. (25 €) - 32 €",
+        one_hour: "1 hour (50 €) - 63 €"
+      }
+    },
+    guts_cleansing_program: {
+      title: "Guts Cleansing Program",
+      duration: "7-10 days",
+      price: "(20 €) - 25 €"
+    },
+    detox_program: {
+      title: "Detox Program",
+      duration: "7–10 days",
+      price: "(50-60 €) - 63 €/75 € (includes detox substances and program)"
+    },
+    follow_up_program: {
+      title: "Follow-Up Program",
+      starting: "Prices are based on the target, starting from (50 €) - 63 €"
+    },
+    follow_up_calls: {
+      title: "Follow-Up Call",
+      monthly: "3-4 times/month - (50 €) - 63 €",
+      three_months: "9 times / 3 months - (120 €) - 150 €"
+    },
+    training: {
+      title: "Training",
+      individual: {
+        title: "Individual Training",
+        price: "Food safety training for individuals - 35 €/Person"
+      },
+      company: {
+        title: "Company Training",
+        price: "Food safety training for companies - 25 €/Person"
+      }
+    }
+  },
+  testimonial: {
+    title: "Testimonials",
+    customer_one: {
+      name: "Customer One",
+      content: "This service changed my life!"
+    },
+    customer_two: {
+      name: "Customer Two",
+      content: "Exceptional quality and support!"
+    }
+  },
   safeHealthyBite: {
     title: "Safe Healthy Bite",
     tagline: "Food Safety | General Health and Nutrition Advisory",

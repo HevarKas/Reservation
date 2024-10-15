@@ -1,8 +1,12 @@
 import { Link } from "react-scroll";
 import LanguageSelector from "./LanguageSelector";
 import { useState } from "react";
+import { NavLink } from "@remix-run/react";
+import { useTranslation } from "react-i18next";
+import safeBiteLogo from "~/assets/safe_bite_logo.jpg";
 
 export default function Navbar() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleMenu = () => {
@@ -13,17 +17,30 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
+  const title = t("navbar.title");
+  const about = t("navbar.about");
+  const service = t("navbar.service");
+  const information = t("navbar.information");
+  const testimonial = t("navbar.testimonial");
+  const contact = t("navbar.contact");
+  const price = t("navbar.price");
+  const reservation = t("navbar.reservation");
+
   return (
     <header className="fixed w-full bg-white shadow-lg z-50">
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold text-gray-800">MyLogo</div>
+        <div className="text-2xl font-bold text-gray-800">
+        <Link to="/">
+          <img src={safeBiteLogo} alt="Safe Bite Logo" className="rounded-full h-12 w-12" />
+        </Link>
+        </div>
 
-        <ul className="hidden md:flex md:flex-row md:space-x-6">
-          {["about", "services", "reservation", "information", "contact", "price"].map((section) => (
+        <ul className="hidden lg:flex lg:flex-row items-center lg:space-x-6">
+          {[title, about, service, information, testimonial, contact, price].map((section) => (
             <li key={section}>
               <Link
                 to={section.toLowerCase().replace(" ", "")}
-                className="block text-gray-600 hover:text-blue-500"
+                className="block text-gray-600 hover:text-blue-500 cursor-pointer"
                 smooth={true}
                 duration={800}
                 offset={-70}
@@ -33,6 +50,9 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          <NavLink to="/reservation" className="bg-blue-600 py-1 px-2 text-white rounded-md">
+          {reservation}
+          </NavLink>
         </ul>
 
         <div className="flex items-center space-x-8">
@@ -40,7 +60,7 @@ export default function Navbar() {
 
           <button
             onClick={toggleMenu}
-            className="block md:hidden focus:outline-none"
+            className="block lg:hidden focus:outline-none"
             aria-label="Toggle menu"
           >
             {isOpen ? (
@@ -60,20 +80,23 @@ export default function Navbar() {
               </button>
             </div>
             <ul className="flex flex-col p-4 space-y-2">
-              {["about", "services", "reservation", "information", "contact", "price"].map((section) => (
+              {[title, about, service, information, testimonial, contact, price].map((section) => (
                 <li key={section}>
-<Link
-                to={section.toLowerCase().replace(" ", "")}
-                className="block text-gray-600 hover:text-blue-500"
-                smooth={true}
-                duration={800}
-                offset={-70}
-                activeClass="text-blue-500 font-bold"
-              >
+                  <Link
+                    to={section.toLowerCase().replace(" ", "")}
+                    className="block text-gray-600 hover:text-blue-500"
+                    smooth={true}
+                    duration={800}
+                    offset={-70}
+                    activeClass="text-blue-500 font-bold"
+                  >
                     {section}
                   </Link>
                 </li>
               ))}
+          <NavLink to="/reservation" className="bg-blue-600 p-1 text-white rounded-md text-center">
+          {reservation}
+          </NavLink>
             </ul>
           </div>
         )}

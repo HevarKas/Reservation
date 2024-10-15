@@ -64,8 +64,4 @@
   body {
     @apply bg-background text-foreground;
   }
-
-  .element {
-    padding: 50px 0;
-  }
 }

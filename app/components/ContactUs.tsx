@@ -5,7 +5,7 @@ export default function ContactUs() {
   const { t } = useTranslation();
 
   return (
-    <section id="contact-us" className="py-16">
+    <section id="contact-us" className="bg-blue-50 py-[100px] lg:py-[150px]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold text-blue-700">
@@ -19,37 +19,54 @@ export default function ContactUs() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="p-8 rounded-xl shadow-xl space-y-6 bg-gray-50">
             <h3 className="text-3xl font-semibold text-blue-700">
-              {t('safeHealthyBite.contact.header')}
+              {t('get_in_touch.contact_us')}
             </h3>
 
             <div className="space-y-4 text-gray-700">
               <div className="flex items-start space-x-4">
-                <span className="text-xl font-bold">{t('address')}:</span>
-                <p>{t('safeHealthyBite.contact.location')}</p>
+                <span className="text-xl font-bold">
+                  {t('get_in_touch.email')}:
+                </span>
+                <p>[Insert Email]</p>
               </div>
 
               <div className="flex items-start space-x-4">
-                <span className="text-xl font-bold">{t('phone')}:</span>
-                <p>{t('safeHealthyBite.contact.phone')}</p>
+                <span className="text-xl font-bold">
+                  {t('get_in_touch.phone')}:
+                </span>
+                <p>+358 417105564</p>
               </div>
 
               <div className="flex items-start space-x-4">
-                <span className="text-xl font-bold">{t('email')}:</span>
-                <p>{t('safeHealthyBite.contact.email')}</p>
+                <span className="text-xl font-bold">
+                  {t('get_in_touch.location')}:
+                </span>
+                <p>
+                  On-site at Pinki Salon, Itäkeskus, Helsinki
+                  <br />
+                  Or online, via Zoom or Teams.
+                </p>
               </div>
             </div>
 
-            <p className="text-base text-gray-500">
-              {t('safeHealthyBite.contact.businessHours')}
-            </p>
+            <div className="flex items-start space-x-4">
+              <span className="text-xl font-bold">
+                {t('get_in_touch.calling_time')}:
+              </span>
+              <p>
+                Friday 9-15 clock
+                <br />
+                Saturday 11-15 clock
+              </p>
+            </div>
           </div>
 
           <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-8 rounded-xl shadow-lg space-y-6">
             <h4 className="text-3xl font-semibold text-blue-700">
-              {t('safeHealthyBite.followUs')}
+              {t('get_in_touch.follow_us')}
             </h4>
             <p className="text-gray-700">
-              {t('safeHealthyBite.stayUpdated')}
+              {t('get_in_touch.stay_updated')}
             </p>
 
             <div className="flex space-x-8 justify-center sm:justify-start">

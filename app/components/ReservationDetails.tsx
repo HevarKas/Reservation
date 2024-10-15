@@ -103,7 +103,7 @@ export default function ReservationDetails({
             </option>
           ))}
         </select>
-        {availableTimeSlots.length === 0 && (
+        {availableTimeSlots.length === 0 && selectedDate && (
           <p className="text-red-500 text-sm mt-2">No available times for this date.</p>
         )}
       </div>

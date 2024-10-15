@@ -1,4 +1,81 @@
 export const finnishTranslations = {
+  navbar: {
+    title: "Koti",
+    about: "Tietoa meistä",
+    service: "Palvelut",
+    information: "Lisätietoja",
+    testimonial: "Suosittelut",
+    contact: "Ota yhteyttä",
+    price: "Hinnat",
+    reservation: "Varaukset"
+  },
+  companyName: "Safe Healthy Bites",
+  slogan: "Turvallista ruokaa, terveellisiä valintoja, parempaa elämää",
+  description: "Safe Healthy Bite -palvelussa uskomme, että ruoka ei ole vain polttoainetta, vaan voimakas työkalu terveyden, hyvinvoinnin ja pitkäikäisyyden saavuttamiseen. Johdamme sinut kohti terveellisempää elämää asiantuntevalla elintarviketurvallisuuden menetelmillä, ravitsemusneuvonnalla ja luonnonmukaisilla hoitokeinoilla.",
+  services: {
+    foodSafety: "Elintarviketurvallisuus",
+    nutritionAdvisory: "Yleinen terveys ja ravitsemusneuvonta"
+  },
+  get_in_touch: {
+    contact_us: "Ota yhteyttä",
+    email: "Sähköposti",
+    phone: "Puhelin",
+    location: "Sijainti",
+    calling_time: "Soittoaika",
+    follow_us: "Seuraa meitä",
+    stay_updated: "Pysy ajan tasalla"
+  },
+  price: {
+    consultation: {
+      title: "Alku konsultaatio",
+      content: "haastattelun alussa sisältyy sairauksien ja tavoitteiden kartoitus",
+      options: {
+        half_hour: "30 min. (25 €) - 32 €",
+        one_hour: "1 tunti (50 €) - 63 €"
+      }
+    },
+    guts_cleansing_program: {
+      title: "Suoliston puhdistus ohjelma",
+      duration: "7-10 päivälle",
+      price: "(20 €) - 25 €"
+    },
+    detox_program: {
+      title: "Detox ohjelma",
+      duration: "7–10 päivälle",
+      price: "(50-60 €) - 63 €/75 € (sisältää detox-aineet ja ohjelman)"
+    },
+    follow_up_program: {
+      title: "Jatko-ohjelma",
+      starting: "Hinnat tavoitteen mukaan, alk. (50 €) - 63 €"
+    },
+    follow_up_calls: {
+      title: "Seuranta soitto",
+      monthly: "3-4 kertaa/kk - (50 €) - 63 €",
+      three_months: "9 kertaa / 3 kk - (120 €) - 150 €"
+    },
+    training: {
+      title: "Koulutus",
+      individual: {
+        title: "Yksilöllinen koulutus",
+        price: "Ruoan turvallisuuden koulutus yksilöille - 35 €/Henkilö"
+      },
+      company: {
+        title: "Yrityskoulutus",
+        price: "Ruoan turvallisuuden koulutus yrityksille - 25 €/henkilö"
+      }
+    }
+  },
+  testimonial: {
+    title: "Suosittelut",
+    customer_one: {
+      name: "Asiakas yksi",
+      content: "Tämä palvelu muutti elämäni!"
+    },
+    customer_two: {
+      name: "Asiakas kaksi",
+      content: "Poikkeuksellinen laatu ja tuki!"
+    }
+  },
   safeHealthyBite: {
     title: "Safe Healthy Bite",
     tagline: "Elintarviketurvallisuus | Yleinen terveys ja ravitsemusneuvonta",

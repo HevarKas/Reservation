@@ -4,7 +4,7 @@ function MoreInformation() {
   const { t } = useTranslation();
 
   return (
-    <section className="bg-gray-100 py-12">
+    <section className="py-[100px] lg:py-[150px]">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-bold text-blue-600 mb-6">
           {t('safeHealthyBite.whyChooseUs.header')}

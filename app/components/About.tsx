@@ -10,7 +10,7 @@ const About: React.FC = () => {
   return (
     <section
       id="about"
-      className="flex flex-col items-center justify-center p-6 sm:p-10 lg:p-12"
+      className="flex flex-col items-center justify-center py-[100px] lg:py-[150px]"
     >
       <div className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col lg:flex-row max-w-6xl w-full p-6">
         <div className="flex-shrink-0">
