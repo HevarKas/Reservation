@@ -52,13 +52,13 @@ export const getReservedTimesByDate = async (date: Date): Promise<string[]> => {
 
 export const getReservedByDate = async (date: Date) => {
   const reservations = await prisma.reservation.findMany({
-    where: {
-      appointmentDate: date,
-    }
+      where: {
+          appointmentDate: date,
+      },
   });
 
-  return reservations
-}
+  return reservations;
+};
 
 export const getAllReservations = async (): Promise<ReservationType[]> => {
   return await prisma.reservation.findMany();

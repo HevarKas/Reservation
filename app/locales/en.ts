@@ -30,28 +30,28 @@ export const englishTranslations = {
       title: "Initial Consultation",
       content: "the beginning of the interview includes a survey of illnesses and goals",
       options: {
-        half_hour: "30 min. (25 €) - 32 €",
-        one_hour: "1 hour (50 €) - 63 €"
+        half_hour: "30 min. (25 €) - with VAT 32 €",
+        one_hour: "1 hour (50 €) - with VAT 63 €"
       }
     },
     guts_cleansing_program: {
       title: "Guts Cleansing Program",
       duration: "7-10 days",
-      price: "(20 €) - 25 €"
+      price: "(20 €) - with VAT 25 €"
     },
     detox_program: {
       title: "Detox Program",
       duration: "7–10 days",
-      price: "(50-60 €) - 63 €/75 € (includes detox substances and program)"
+      price: "(50-60 €) - with VAT 63 €/75 € (includes detox substances and program)"
     },
     follow_up_program: {
       title: "Follow-Up Program",
-      starting: "Prices are based on the target, starting from (50 €) - 63 €"
+      starting: "Prices are based on the target, starting from (50 €) - with VAT 63 €"
     },
     follow_up_calls: {
       title: "Follow-Up Call",
-      monthly: "3-4 times/month - (50 €) - 63 €",
-      three_months: "9 times / 3 months - (120 €) - 150 €"
+      monthly: "3-4 times/month - (50 €) - with VAT 63 €",
+      three_months: "9 times / 3 months - (120 €) - with VAT 150 €"
     },
     training: {
       title: "Training",
@@ -130,7 +130,7 @@ export const englishTranslations = {
       location: "On-site at Pinki Salon, Itäkeskus, Helsinki or online, via Zoom or Teams."
     },
     prices: {
-      header: "Prices (Do not contain the VAT)",
+      header: "Prices",
       consultation: {
         halfHour: "Consultant ½ hr. 25 €",
         oneHour: "1 hr. 50 €"

@@ -30,28 +30,29 @@ export const finnishTranslations = {
       title: "Alku konsultaatio",
       content: "haastattelun alussa sisältyy sairauksien ja tavoitteiden kartoitus",
       options: {
-        half_hour: "30 min. (25 €) - 32 €",
-        one_hour: "1 tunti (50 €) - 63 €"
+        // with vat ALV:tä
+        half_hour: "30 min. (25 €) - Ilman alv ALV 32 €",
+        one_hour: "1 tunti (50 €) - Ilman alv ALV 63 €"
       }
     },
     guts_cleansing_program: {
       title: "Suoliston puhdistus ohjelma",
       duration: "7-10 päivälle",
-      price: "(20 €) - 25 €"
+      price: "(20 €) - Ilman alv ALV 25 €"
     },
     detox_program: {
       title: "Detox ohjelma",
       duration: "7–10 päivälle",
-      price: "(50-60 €) - 63 €/75 € (sisältää detox-aineet ja ohjelman)"
+      price: "(50-60 €) - Ilman alv ALV 63 €/75 € (sisältää detox aineet ja ohjelman)"
     },
     follow_up_program: {
       title: "Jatko-ohjelma",
-      starting: "Hinnat tavoitteen mukaan, alk. (50 €) - 63 €"
+      starting: "Hinnat tavoitteen mukaan, alk. (50 €) - Ilman alv ALV 63 €"
     },
     follow_up_calls: {
       title: "Seuranta soitto",
-      monthly: "3-4 kertaa/kk - (50 €) - 63 €",
-      three_months: "9 kertaa / 3 kk - (120 €) - 150 €"
+      monthly: "3-4 kertaa/kk - (50 €) - Ilman alv ALV 63 €",
+      three_months: "9 kertaa / 3 kk - (120 €) - Ilman alv ALV 150 €"
     },
     training: {
       title: "Koulutus",
@@ -130,7 +131,7 @@ export const finnishTranslations = {
       location: "Paikan päällä Pinki Salonissa, Itäkeskus, Helsinki tai verkossa, Zoomin tai Teamsin kautta."
     },
     prices: {
-      header: "Hinnat (eivät sisällä ALV:tä)",
+      header: "Hinnat",
       consultation: {
         halfHour: "Konsultointi ½ tuntia 25 €",
         oneHour: "1 tunti 50 €"
