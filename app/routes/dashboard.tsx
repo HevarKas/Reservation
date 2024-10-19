@@ -39,17 +39,16 @@ export const loader = async ({ request }: { request: Request }): Promise<Reserva
 function Dashboard() {
     const loaderData = useLoaderData<Reservation[]>();
     const [searchParams] = useSearchParams();
-    const [currentTime, setCurrentTime] = useState<string>(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+    const [currentTime, setCurrentTime] = useState<string>(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }));
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setCurrentTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+            setCurrentTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }));
         }, 60000);
     
         return () => clearInterval(timer);
     }, []);
     
-
     const filteredReservations = useMemo(() => {
         const dateParam = searchParams.get("date");
         const selectedDate = dateParam ? new Date(dateParam) : new Date();
