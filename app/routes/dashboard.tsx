@@ -39,15 +39,16 @@ export const loader = async ({ request }: { request: Request }): Promise<Reserva
 function Dashboard() {
     const loaderData = useLoaderData<Reservation[]>();
     const [searchParams] = useSearchParams();
-    const [currentTime, setCurrentTime] = useState<string>(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+    const [currentTime, setCurrentTime] = useState<string>(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setCurrentTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }));
-        }, 1000);
-
+            setCurrentTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+        }, 60000);
+    
         return () => clearInterval(timer);
     }, []);
+    
 
     const filteredReservations = useMemo(() => {
         const dateParam = searchParams.get("date");
@@ -85,8 +86,6 @@ function Dashboard() {
                 return appointmentATime - appointmentBTime;
             });
     }, [loaderData, searchParams, currentTime]);
-    
-    
 
     const nextAppointment = filteredReservations.length > 0 ? filteredReservations[0] : null;
 

@@ -27,7 +27,7 @@ export default function ContactUs() {
                 <span className="text-xl font-bold">
                   {t('get_in_touch.email')}:
                 </span>
-                <p>[Insert Email]</p>
+                <p>hazhaow2@gmail.com</p>
               </div>
 
               <div className="flex items-start space-x-4">

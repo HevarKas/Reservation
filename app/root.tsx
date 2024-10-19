@@ -10,7 +10,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./tailwind.css";
 import { LanguageProvider } from "./components/LanguageContext";
 
-
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">

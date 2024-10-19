@@ -9,7 +9,7 @@ export const finnishTranslations = {
     price: "Hinnat",
     reservation: "Varaukset"
   },
-  companyName: "Safe Healthy Bites",
+  companyName: "Safe Healthy Bite",
   slogan: "Turvallista ruokaa, terveellisiä valintoja, parempaa elämää",
   description: "Safe Healthy Bite -palvelussa uskomme, että ruoka ei ole vain polttoainetta, vaan voimakas työkalu terveyden, hyvinvoinnin ja pitkäikäisyyden saavuttamiseen. Johdamme sinut kohti terveellisempää elämää asiantuntevalla elintarviketurvallisuuden menetelmillä, ravitsemusneuvonnalla ja luonnonmukaisilla hoitokeinoilla.",
   services: {
