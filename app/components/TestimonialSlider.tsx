@@ -2,6 +2,7 @@ import { useState } from 'react';
 import person1Image from "~/assets/person-1.png";
 import person2Image from "~/assets/person-2.png";
 import person3Image from "~/assets/person-3.png";
+import person4Image from "~/assets/person-4.png";
 
 const testimonials = [
   {
@@ -21,6 +22,12 @@ const testimonials = [
     location: "Iraq",
     message: "Salam alikom. I am Razia Mohammed, a client of Dr. Hazhaw, from Iraq. I was under her supervision and guidance for many years, and I have benefited greatly from her giving nutrition advice and suggested food intake councils. She is really a very caring person. May god bless her.",
     image: person3Image
+  },
+  {
+    name: "Fatima Mohammed",
+    location: "Iraq",
+    message: "I am Fatima Mohammed . I was a client of Hazhaow. I wa suffering from many health issues because of of not following a healthy and good diet habits. Afrer meeting her and following her suggestion and instructions for eating habits and choices. My life had been changed a lot. As you can see. A big thanks for her and god bless her.",
+    image: person4Image
   }
 ];
 
@@ -36,7 +43,7 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <section className="bg-white py-[100px] px-8 text-center">
+    <section className="bg-blue-50 py-[100px] px-8 text-center">
       <div className="relative">
         <div className="p-4 transition-opacity duration-500 mx-8 lg:mx-[170px]">
           <img

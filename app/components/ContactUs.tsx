@@ -5,7 +5,7 @@ export default function ContactUs() {
   const { t } = useTranslation();
 
   return (
-    <section id="contact-us" className="bg-blue-50 py-[100px] lg:py-[150px]">
+    <section id="contact-us" className="bg-white py-[100px] lg:py-[150px]">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold text-blue-700">

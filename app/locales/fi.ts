@@ -68,6 +68,16 @@ export const finnishTranslations = {
   },
   testimonial: {
     title: "Suosittelut",
+    before_after: {
+      before: "Ennen",
+      after: "Jälkeen",
+      title: "Vaikuttava muutos",
+      content: "Meillä on ilo esitellä huomattavaa edistystä palvelumme vastaanottamisen jälkeen. Tämä muutos heijastaa sitoutumistamme huippuosaamiseen ja erinomaisten tulosten saavuttamiseen."
+    },
+    customer_main: {
+      name: "Pääasiakas",
+      content: "Tämä palvelu muutti elämäni!"
+    },
     customer_one: {
       name: "Asiakas yksi",
       content: "Tämä palvelu muutti elämäni!"
@@ -75,6 +85,10 @@ export const finnishTranslations = {
     customer_two: {
       name: "Asiakas kaksi",
       content: "Poikkeuksellinen laatu ja tuki!"
+    },
+    customer_three: {
+      name: "Asiakas kolme",
+      content: "Erittäin suositeltavaa!"
     }
   },
   safeHealthyBite: {

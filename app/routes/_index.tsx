@@ -10,6 +10,7 @@ import VideoPlayer from "~/components/VideoPlayer";
 import TestimonialSlider from "~/components/TestimonialSlider";
 import { useTranslation } from "react-i18next";
 import ImageSlider from "~/components/ImageSlider";
+import BeforeAfter from "~/components/BeforeAfter";
 
 export default function Reservations() {
   const { t } = useTranslation();
@@ -46,6 +47,8 @@ export default function Reservations() {
 
       <Element name={testimonial}>
         <VideoPlayer />
+        
+        <BeforeAfter />
 
         <TestimonialSlider />
       </Element>

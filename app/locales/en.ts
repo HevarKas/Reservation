@@ -67,6 +67,16 @@ export const englishTranslations = {
   },
   testimonial: {
     title: "Testimonials",
+    before_after: {
+      before: "Before",
+      after: "After",
+      title: "An Impressive Transformation",
+      content: "We are pleased to showcase the remarkable progress made after receiving our service. This transformation reflects our commitment to excellence and delivering outstanding results."
+    },
+    customer_main: {
+      title: "Main Customer",
+      content: "I lost 18 kg in 3 months and I feel great!"
+    },
     customer_one: {
       name: "Customer One",
       content: "This service changed my life!"
@@ -74,6 +84,10 @@ export const englishTranslations = {
     customer_two: {
       name: "Customer Two",
       content: "Exceptional quality and support!"
+    },
+    customer_three: {
+      name: "Customer Three",
+      content: "I am very satisfied with the service!"
     }
   },
   safeHealthyBite: {

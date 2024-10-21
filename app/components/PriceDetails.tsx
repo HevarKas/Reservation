@@ -4,7 +4,7 @@ function PriceDetails() {
   const { t } = useTranslation();
 
   return (
-    <section id="price-details" className="bg-white py-[100px] lg:py-[150px]">
+    <section id="price-details" className="bg-blue-50 py-[100px] lg:py-[150px]">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-blue-700 text-center mb-10">
           {t('safeHealthyBite.prices.header')}

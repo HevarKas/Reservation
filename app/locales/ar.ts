@@ -67,6 +67,16 @@ export const arabicTranslations = {
   },
   testimonial: {
     title: "الشهادات",
+    before_after: {
+      before: "قبل",
+      after: "بعد",
+      title: "تحول مثير للإعجاب",
+      content: "يسعدنا أن نستعرض التقدم الملحوظ الذي أحرزناه بعد تلقي خدماتنا. ويعكس هذا التحول التزامنا بالتميز وتقديم نتائج متميزة.",
+    },
+    customer_main: {
+      title: "العميل الرئيسي",
+      content: "فقدت 18 كجم في 3 أشهر وأشعر برائع!"
+    },
     customer_one: {
       name: "العميل الأول",
       content: "غيرت هذه الخدمة حياتي!"
@@ -74,6 +84,10 @@ export const arabicTranslations = {
     customer_two: {
       name: "العميل الثاني",
       content: "جودة استثنائية ودعم!"
+    },
+    customer_three: {
+      name: "العميل الثالث",
+      content: "أنا ممتن للغاية للمساعدة التي حصلت عليها!"
     }
   },
   safeHealthyBite: {
