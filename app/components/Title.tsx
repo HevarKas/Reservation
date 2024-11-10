@@ -9,7 +9,7 @@ function Title() {
             {t("companyName")}
         </div>
         <div className="text-xl md:text-2xl text-gray-700 mb-8 uppercase tracking-wide">
-            {t("services.foodSafety")} | {t("services.nutritionAdvisory")}
+            {t("services.foodSafety")} / {t("services.nutritionAdvisory")}
         </div>
         <div className="text-lg md:text-xl text-blue-500 italic mb-10">
             {t("slogan")}

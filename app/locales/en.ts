@@ -4,7 +4,7 @@ export const englishTranslations = {
     about: "About",
     service: "Service",
     information: "Information",
-    testimonial: "Testimonial",
+    testimonial: "User Story",
     contact: "Contact",
     price: "Price",
     reservation: "Reservation"
@@ -111,7 +111,7 @@ export const englishTranslations = {
     }
   },  
   testimonial: {
-    title: "Testimonials",
+    title: "User Stories",
     before_after: {
       before: "Before",
       after: "After",
@@ -186,7 +186,9 @@ export const englishTranslations = {
       content: "Ready to embark on the path to better health or protect your business with expert food safety management? Contact me today to schedule a consultation.",
       email: "[Insert Email]",
       phone: "+358 417105564",
-      location: "On-site at Pinki Salon, Itäkeskus, Helsinki or online, via Zoom or Teams."
+      location: "On-site at Pinki Salon, Itäkeskus, Helsinki or online, via Zoom or Teams.",
+      friday: "Friday 9-15 clock",
+      saturday: "Saturday 11-15 clock"
     },
     prices: {
       header: "Prices",

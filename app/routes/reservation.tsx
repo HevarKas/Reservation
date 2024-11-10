@@ -110,11 +110,11 @@ function Reservation() {
 </h2>
 {/* subtitle */}
 <p className="text-xl text-center text-gray-600 mb-4 sm:text-lg">
-  {t('inputFields.subtitle')}
+{t('inputFields.paragraph')}
 </p>
 
 <p className="text-lg text-center text-gray-600 mb-8 sm:text-base">
-  {t('inputFields.paragraph')}
+{t('inputFields.subtitle')}
 </p>
 
 

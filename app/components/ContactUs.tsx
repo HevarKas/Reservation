@@ -27,21 +27,25 @@ export default function ContactUs() {
                 <span className="text-xl font-bold">
                   {t('get_in_touch.email')}:
                 </span>
-                <p>hazhaow2@gmail.com</p>
+                <p className='px-3'
+                >hazhaow2@gmail.com</p>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <span className="text-xl font-bold">
-                  {t('get_in_touch.phone')}:
-                </span>
-                <p>+358 417105564</p>
-              </div>
+              <div className="flex items-center space-x-2">
+  <span className="text-xl font-bold">
+    {t('get_in_touch.phone')}:
+  </span>
+  <span className="text-xl font-medium px-3">
+    00358-417105564
+  </span>
+</div>
+
 
               <div className="flex items-start space-x-4">
                 <span className="text-xl font-bold">
                   {t('get_in_touch.location')}:
                 </span>
-                <p>
+                <p className='px-3'>
                   On-site at Pinki Salon, Itäkeskus, Helsinki
                   <br />
                   Or online, via Zoom or Teams.
@@ -53,10 +57,10 @@ export default function ContactUs() {
               <span className="text-xl font-bold">
                 {t('get_in_touch.calling_time')}:
               </span>
-              <p>
-                Friday 9-15 clock
+              <p className='px-3'>
+                {t('safeHealthyBite.contact.friday')}
                 <br />
-                Saturday 11-15 clock
+                {t('safeHealthyBite.contact.saturday')}
               </p>
             </div>
           </div>

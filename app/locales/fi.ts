@@ -4,7 +4,7 @@ export const finnishTranslations = {
     about: "Tietoa meistä",
     service: "Palvelut",
     information: "Lisätietoja",
-    testimonial: "Suosittelut",
+    testimonial: "Käyttäjätarinat",
     contact: "Ota yhteyttä",
     price: "Hinnat",
     reservation: "Varaukset"
@@ -108,7 +108,7 @@ export const finnishTranslations = {
     }
   },  
   testimonial: {
-    title: "Suosittelut",
+    title: "Käyttäjätarinat",
     before_after: {
       before: "Ennen",
       after: "Jälkeen",
@@ -183,7 +183,9 @@ export const finnishTranslations = {
       content: "Valmiina astumaan parempaan terveyteen tai suojelemaan yrityksesi asiantuntevalla elintarviketurvallisuuden hallinnalla? Ota yhteyttä tänään varataksesi konsultoinnin.",
       email: "[Lisää sähköposti]",
       phone: "+358 417105564",
-      location: "Paikan päällä Pinki Salonissa, Itäkeskus, Helsinki tai verkossa, Zoomin tai Teamsin kautta."
+      location: "Paikan päällä Pinki Salonissa, Itäkeskus, Helsinki tai verkossa, Zoomin tai Teamsin kautta.",
+      friday: "Perjantai 9-15",
+      saturday: "Lauantai 11-15"
     },
     prices: {
       header: "Hinnat",
