@@ -1,20 +1,41 @@
 export const englishTranslations = {
   navbar: {
-    title: "title",
-    about: "about",
-    service: "service",
-    information: "information",
-    testimonial: "testimonial",
-    contact: "contact",
-    price: "price",
-    reservation: "reservation"
+    title: "Home",
+    about: "About",
+    service: "Service",
+    information: "Information",
+    testimonial: "Testimonial",
+    contact: "Contact",
+    price: "Price",
+    reservation: "Reservation"
   },
-  companyName: "Safe Healthy Bite",
+  inputFields: {
+    subtitle: "If you do not request to cancel or reschedule your appointment within 24 hours of the scheduled time, a fee of 50% of the initial consultation cost will be deducted.",
+    paragraph: "To cancel your reservation, please contact us through WhatsApp or email,  24 hours before the reservation at the latest.",
+    finland: "appointment is acording to finland time",
+    goalOfTheMeeting: "Goal of the Meeting",  
+    onsite: "Onsite",
+    zoom: "Zoom",
+    location: "Location",
+    makeAreservation: "Make a Reservation", 
+    name: "Name",
+    namePlaceHolder:  "Enter your name",
+    phoneNumber: "Phone Number",
+    phoneNumberPlaceholder:  "Enter your phone number",
+    email: "Email",
+    emailPlaceholder: "Enter your email",
+    appointmentDate: "Appointment Date",
+    appointmentTime: "Appointment Time",
+    selectTime: "Select Time",
+    submit: "Submit",
+    loading: "Loading..."
+  },
+  companyName: "Safe Healthy Bites",
   slogan: "Safe food, healthy choices, better life",
   description: "At Safe Healthy Bite, we believe that food is not just fuel, but a powerful tool for health, well-being, and longevity. We lead the path to a healthier life through expert food safety management, nutritional advice, and natural remedies.",
   services: {
     foodSafety: "Food Safety",
-    nutritionAdvisory: "General Health and Nutrition Advisory",
+    nutritionAdvisory: "General Health and Nutrition Advisor",
   },
   get_in_touch: {
     contact_us: "Contact Us",
@@ -28,43 +49,67 @@ export const englishTranslations = {
   price: {
     consultation: {
       title: "Initial Consultation",
-      content: "the beginning of the interview includes a survey of illnesses and goals",
       options: {
-        half_hour: "30 min. (25 €) - with VAT 32 €",
-        one_hour: "1 hour (50 €) - with VAT 63 €"
-      }
+        half_hour: {
+          time: "30 min",
+          price: "25€"
+        },
+        one_hour: {
+          time: "60 min",
+          price: "50€"
+        },
+      },
+      content: "The initial interview includes a survey of illnesses and goals."
     },
     guts_cleansing_program: {
       title: "Guts Cleansing Program",
-      duration: "7-10 days",
-      price: "(20 €) - with VAT 25 €"
+      duration: "7–10 days",
+      price: "25€"
     },
     detox_program: {
       title: "Detox Program",
       duration: "7–10 days",
-      price: "(50-60 €) - with VAT 63 €/75 € (includes detox substances and program)"
+      price: "50€ - 60€",
+      content: "Includes detox substances and program."
     },
     follow_up_program: {
       title: "Follow-Up Program",
-      starting: "Prices are based on the target, starting from (50 €) - with VAT 63 €"
+      starting: {
+        price: "From 50€",
+        with_vat: "63€",
+        content: "Based on individual needs."
+      }
     },
     follow_up_calls: {
-      title: "Follow-Up Call",
-      monthly: "3-4 times/month - (50 €) - with VAT 63 €",
-      three_months: "9 times / 3 months - (120 €) - with VAT 150 €"
+      title: "Follow-Up Calls",
+      options: {
+        monthly: {
+          frequency: "3–4 times/month",
+          price: "50€",
+          with_vat: "63€"
+        },
+        three_months: {
+          frequency: "9 times/3 months",
+          price: "120€",
+          with_vat: "150€"
+        }
+      }
     },
     training: {
-      title: "Training",
-      individual: {
-        title: "Individual Training",
-        price: "Food safety training for individuals - 35 €/Person"
-      },
-      company: {
-        title: "Company Training",
-        price: "Food safety training for companies - 25 €/Person"
+      title: "Trainings (Iraq only)",
+      food_safety: {
+        title: "Food Safety Training",
+        individual: {
+          title: "Individual Training",
+          price: "35€/person"
+        },
+        company: {
+          title: "Company Training",
+          price: "25€/person"
+        }
       }
     }
-  },
+  },  
   testimonial: {
     title: "Testimonials",
     before_after: {
@@ -129,7 +174,7 @@ export const englishTranslations = {
       }
     },
     whyChooseUs: {
-      header: "Why Choose Safe Healthy Bite?",
+      header: "Why Choose Safe Healthy Bites?",
       content: "With decades of experience in food safety and nutrition, I understand the deep connection between what we eat and our overall health. My mission is to ensure food safety practices are upheld by businesses while empowering individuals to make healthy choices. By focusing on natural food solutions and safe food handling, I help my clients lead healthier lives."
     },
     callToAction: {

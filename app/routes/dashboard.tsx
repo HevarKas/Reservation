@@ -1,7 +1,7 @@
 import { redirect, useLoaderData, useSearchParams, Form } from "@remix-run/react";
 import { useEffect, useState, useMemo } from "react";
-import { getReservedByDate } from "~/data/reservationService";
-
+import { deleteReservation, getReservedByDate } from "~/data/reservationService";
+import { FaTrashAlt } from "react-icons/fa";
 interface Reservation {
     id: number;
     name: string;
@@ -9,6 +9,8 @@ interface Reservation {
     email: string;
     appointmentDate: Date;
     appointmentTime: string;
+    location: string | null;
+    goalsOfMeeting: string | null;
 }
 
 export const loader = async ({ request }: { request: Request }): Promise<Reservation[] | Response> => {
@@ -33,6 +35,23 @@ export const loader = async ({ request }: { request: Request }): Promise<Reserva
         return reservations;
     } catch (error) {
         throw new Error('Failed to get reservations');
+    }
+};
+
+export const action = async ({ request }: { request: Request }) => {
+    const formData = new URLSearchParams(await request.text());
+    const reservationId = formData.get("id");
+    const searchParams = new URLSearchParams(request.url.split("?")[1]);
+
+    if (!reservationId) {
+        return new Response("Bad Request", { status: 400 });
+    }
+
+    try {
+        await deleteReservation(Number(reservationId));
+        return redirect(`/dashboard?${searchParams.toString()}`);
+    } catch (error) {
+        return new Response("Failed to delete reservation", { status: 500 });
     }
 };
 
@@ -105,7 +124,6 @@ function Dashboard() {
                 </div>
             </div>
 
-            {/* Date selection form */}
             <Form method="get" className="mb-6">
                 <label htmlFor="date" className="block mb-2 text-lg font-medium text-gray-700">
                     Select a date to view appointments:
@@ -142,6 +160,14 @@ function Dashboard() {
                             <p className="text-gray-600">Email: {item.email}</p>
                             <p className="text-gray-600">Appointment Date: {new Date(item.appointmentDate).toLocaleDateString()}</p>
                             <p className="text-gray-600">Appointment Time: {item.appointmentTime}</p>
+                            <p className="text-gray-600">Location: {item?.location ? item.location : 'N/A'}</p>
+                            <p className="text-gray-600">Goal of the meeting: {item?.goalsOfMeeting ? item.goalsOfMeeting : 'N/A'}</p>
+                            <Form method="post">
+                                <input type="hidden" name="id" value={item.id} />
+                                <button type="submit" className="mt-4 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition">
+                                <FaTrashAlt />
+                                </button>
+                            </Form>
                         </div>
                     ))}
                 </div>

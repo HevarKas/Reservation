@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
 
 export default function ContactUs() {
   const { t } = useTranslation();
@@ -65,34 +65,14 @@ export default function ContactUs() {
             <h4 className="text-3xl font-semibold text-blue-700">
               {t('get_in_touch.follow_us')}
             </h4>
-            <p className="text-gray-700">
-              {t('get_in_touch.stay_updated')}
-            </p>
-
             <div className="flex space-x-8 justify-center sm:justify-start">
               <a
-                href="/"
-                className="text-blue-600 hover:text-blue-800 transition-colors duration-300"
-              >
-                <FaFacebook size={48} />
-              </a>
-              <a
-                href="/"
-                className="text-blue-400 hover:text-blue-600 transition-colors duration-300"
-              >
-                <FaTwitter size={48} />
-              </a>
-              <a
-                href="/"
+                href="https://www.instagram.com/safehealthybites/?igsh=YWc2YXJ4ZmFvcHJu"
+                target="_blank"
+                rel="noreferrer"
                 className="text-pink-600 hover:text-pink-800 transition-colors duration-300"
               >
                 <FaInstagram size={48} />
-              </a>
-              <a
-                href="/"
-                className="text-red-600 hover:text-red-800 transition-colors duration-300"
-              >
-                <FaYoutube size={48} />
               </a>
             </div>
           </div>

@@ -9,6 +9,7 @@ const VideoPlayer = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [ReactPlayerComponent, setReactPlayerComponent] = useState<null | any>(null);
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
+  const [playing, setPlaying] = useState(false);
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -34,10 +35,16 @@ const VideoPlayer = () => {
 
   const handleNext = () => {
     setCurrentVideoIndex((prevIndex) => (prevIndex + 1) % videos.length);
+    setPlaying(false); // Pause video on changing
   };
 
   const handlePrev = () => {
     setCurrentVideoIndex((prevIndex) => (prevIndex - 1 + videos.length) % videos.length);
+    setPlaying(false); // Pause video on changing
+  };
+
+  const handlePlayClick = () => {
+    setPlaying(true); // Play video on click
   };
 
   return (
@@ -53,13 +60,11 @@ const VideoPlayer = () => {
             controls
             width="100%"
             height="600px" 
-            playing={true}
+            playing={playing}
+            onClick={handlePlayClick}
           />
           <p className="text-lg md:text-xl text-gray-700 mt-4 italic">
             {videos[currentVideoIndex].testimonial}
-          </p>
-          <p className="text-sm md:text-base text-gray-500">
-            {videos[currentVideoIndex].customer}
           </p>
         </div>
 

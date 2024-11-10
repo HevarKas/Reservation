@@ -9,6 +9,27 @@ export const finnishTranslations = {
     price: "Hinnat",
     reservation: "Varaukset"
   },
+  inputFields: {
+    subtitle: "Jos et pyydä perumista tai ajan siirtoa 24 tuntia ennen sovittua aikaa, perimme 50 % alkuperäisen konsultaation hinnasta.",
+    paragraph: "Ajanvarauksen perumiseen ottakaa meihin yhteyttä viimeistään 24 tuntia ennen varattua aikaa WhatsAppin tai sähköpostin kautta.",
+    finland: "tapaaminen on Suomen ajan mukaan",
+    goalOfTheMeeting: "Tapaamisen tavoite",
+    onsite: "Paikan päällä",
+    zoom: "Zoom",
+    location: "Sijainti",
+    makeAreservation: "Varaa aika",
+    name: "Nimi",
+    namePlaceHolder: "Kirjoita nimesi",
+    phoneNumber: "Puhelinnumero",
+    phoneNumberPlaceholder: "Kirjoita puhelinnumerosi",
+    email: "Sähköposti",
+    emailPlaceholder: "Kirjoita sähköpostisi",
+    appointmentDate: "Päivämäärä",
+    appointmentTime: "Aika",
+    selectTime:  "Valitse aika",
+    submit: "submit",
+    loading: "Ladataan...",
+  },
   companyName: "Safe Healthy Bite",
   slogan: "Turvallista ruokaa, terveellisiä valintoja, parempaa elämää",
   description: "Safe Healthy Bite -palvelussa uskomme, että ruoka ei ole vain polttoainetta, vaan voimakas työkalu terveyden, hyvinvoinnin ja pitkäikäisyyden saavuttamiseen. Johdamme sinut kohti terveellisempää elämää asiantuntevalla elintarviketurvallisuuden menetelmillä, ravitsemusneuvonnalla ja luonnonmukaisilla hoitokeinoilla.",
@@ -27,45 +48,65 @@ export const finnishTranslations = {
   },
   price: {
     consultation: {
-      title: "Alku konsultaatio",
-      content: "haastattelun alussa sisältyy sairauksien ja tavoitteiden kartoitus",
+      title: "Alku Konsultaatio",
       options: {
-        // with vat ALV:tä
-        half_hour: "30 min. (25 €) - Ilman alv ALV 32 €",
-        one_hour: "1 tunti (50 €) - Ilman alv ALV 63 €"
-      }
+        half_hour: {
+          time: "30 min",
+          price: "25€"
+        },
+        one_hour: {
+          time: "60 min",
+          price: "50€"
+        },
+      },
+      content: "Alkuhaastattelu sisältää kartoituksen sairauksista ja tavoitteista."
     },
     guts_cleansing_program: {
-      title: "Suoliston puhdistus ohjelma",
-      duration: "7-10 päivälle",
-      price: "(20 €) - Ilman alv ALV 25 €"
+      title: "Suoliston Puhdistus Ohjelma",
+      duration: "7–10 pv",
+      price: "20€"
     },
     detox_program: {
-      title: "Detox ohjelma",
-      duration: "7–10 päivälle",
-      price: "(50-60 €) - Ilman alv ALV 63 €/75 € (sisältää detox aineet ja ohjelman)"
+      title: "Detox Ohjelma",
+      duration: "7–10 päivää",
+      price: "50€ - 60€",
+      content: "Sisältää detox-aineet ja ohjelman."
     },
     follow_up_program: {
       title: "Jatko-ohjelma",
-      starting: "Hinnat tavoitteen mukaan, alk. (50 €) - Ilman alv ALV 63 €"
+      starting: {
+        price: "Alk. 50€",
+        content: "Hinnoitellaan yksilön tarpeiden mukaisesti."
+      }
     },
     follow_up_calls: {
-      title: "Seuranta soitto",
-      monthly: "3-4 kertaa/kk - (50 €) - Ilman alv ALV 63 €",
-      three_months: "9 kertaa / 3 kk - (120 €) - Ilman alv ALV 150 €"
+      title: "Seurantasoitto",
+      options: {
+        monthly: {
+          frequency: "3–4 kertaa/kk",
+          price: "50€"
+        },
+        three_months: {
+          frequency: "9 kertaa /3kk",
+          price: "120€"
+        }
+      }
     },
     training: {
-      title: "Koulutus",
-      individual: {
-        title: "Yksilöllinen koulutus",
-        price: "Ruoan turvallisuuden koulutus yksilöille - 35 €/Henkilö"
-      },
-      company: {
-        title: "Yrityskoulutus",
-        price: "Ruoan turvallisuuden koulutus yrityksille - 25 €/henkilö"
+      title: "Koulutukset (Vain Irak)",
+      food_safety: {
+        title: "Ruokaturvallisuus Koulutus",
+        individual: {
+          title: "Yksityisasiakas",
+          price: "35€/hlö"
+        },
+        company: {
+          title: "Yritysasiakas",
+          price: "25€/hlö"
+        }
       }
     }
-  },
+  },  
   testimonial: {
     title: "Suosittelut",
     before_after: {

@@ -14,4 +14,6 @@ model Reservation {
   email           String
   appointmentDate DateTime
   appointmentTime String
+  goalsOfMeeting  String?
+  location        String?
 }

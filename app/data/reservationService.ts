@@ -15,6 +15,8 @@ type CreateReservationInput = {
   email: string;
   appointmentDate: Date;
   appointmentTime: string;
+  location: string;
+  goalsOfMeeting: string;
 };
 
 export const createReservation = async (data: CreateReservationInput) => {
@@ -85,7 +87,7 @@ export const deleteExpiredReservations = async () => {
   };
 
   
-export const deleteReservation = async (id: number): Promise<ReservationType> => {
+export const deleteReservation = async (id: number) => {
   return await prisma.reservation.delete({
     where: { id },
   });

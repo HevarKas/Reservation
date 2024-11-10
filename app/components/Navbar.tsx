@@ -3,7 +3,7 @@ import LanguageSelector from "./LanguageSelector";
 import { useState } from "react";
 import { NavLink } from "@remix-run/react";
 import { useTranslation } from "react-i18next";
-import safeBiteLogo from "~/assets/safe_bite_logo.jpg";
+import safeBiteLogo from "~/assets/safe_bite_logo.png";
 
 export default function Navbar() {
   const { t } = useTranslation();

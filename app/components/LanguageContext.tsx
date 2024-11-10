@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 type LanguageContextProps = {
   language: 'en' | 'fi' | 'ar';
@@ -6,16 +6,15 @@ type LanguageContextProps = {
   setLanguage: (lang: 'en' | 'fi' | 'ar') => void;
 };
 
-const LanguageContext = createContext<LanguageContextProps | undefined>(
-  undefined,
-);
+const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
 
-export const LanguageProvider: React.FC<{ children: ReactNode }> = ({
-  children,
-}) => {
+export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [language, setLanguage] = useState<'en' | 'fi' | 'ar'>('en');
+  const rtl = language === 'ar';
 
-  const rtl = language === 'ar' || language === 'fi';
+  useEffect(() => {
+    document.documentElement.dir = rtl ? 'rtl' : 'ltr';
+  }, [rtl]);
 
   return (
     <LanguageContext.Provider value={{ language, rtl, setLanguage }}>
@@ -29,6 +28,5 @@ export const useLanguage = () => {
   if (!context) {
     throw new Error('useLanguage must be used within a LanguageProvider');
   }
-
   return context;
 };
