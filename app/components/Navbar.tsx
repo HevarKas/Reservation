@@ -31,7 +31,7 @@ export default function Navbar() {
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
         <div className="text-2xl font-bold text-gray-800">
         <Link to="/">
-          <img src={safeBiteLogo} alt="Safe Bite Logo" className="rounded-full h-12 w-12" />
+          <img src={safeBiteLogo} alt="Safe Bite Logo" className="rounded-full h-14 w-14" />
         </Link>
         </div>
 
@@ -64,9 +64,10 @@ export default function Navbar() {
             aria-label="Toggle menu"
           >
             {isOpen ? (
-              <span className="text-gray-600">&#10005;</span>
+              // look bigger
+              <span className="text-gray-600 text-2xl">&#10005;</span>
             ) : (
-              <span className="text-gray-600">&#9776;</span>
+              <span className="text-gray-600 text-2xl">&#9776;</span>
             )}
           </button>
         </div>
