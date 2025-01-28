@@ -7,6 +7,8 @@ WORKDIR /usr/src/app
 # Copy package.json and package-lock.json for dependency installation
 COPY package*.json ./
 
+RUN apk add --no-cache openssl3
+
 # Install all dependencies (including Prisma CLI)
 RUN npm install
 
